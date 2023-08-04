@@ -4,17 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        label, select{
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <form action="/" method="post">
-        <input type="text" id="text">
-        <label for="text">Text</label>
-        <input type="radio" id="male" name="raj">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="raj">
-        <label for="female">female</label>
-        <input type="submit">
-
+    <form action="/">
+        <fieldset>
+            <legend>WELCOME</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" maxlength="20" >
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="30" rows="10">Enter Address</textarea>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="gender1"> Male
+            <input type="radio" name="gender" id="gender2"> Female
+            <label for="hobbies">Hobbies</label>
+            <input type="checkbox" name="hobbies1" id="hobbies1">ABC
+            <input type="checkbox" name="hobbies2" id="hobbies2">DEF
+            <input type="checkbox" name="hobbies3" id="hobbies3">GHI
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="chandigarh" selected>chandigarh</option>
+                <option value="mohali">Mohali</option>
+                <option value="ambala">Ambala</option>
+            </select>
+            <input type="submit">
+        </fieldset>
     </form>
 </body>
 </html>
